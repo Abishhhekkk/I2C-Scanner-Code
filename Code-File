@@ -1,0 +1,39 @@
+#include <Wire.h>  // Include the Wire library for I2C communication
+
+// Define I2C pins for ESP32
+#define SDA_PIN 21  // Default SDA pin (can be changed)
+#define SCL_PIN 22  // Default SCL pin (can be changed)
+
+void setup() {
+  // Start the serial communication for debugging
+  Serial.begin(115200);
+  while (!Serial);  // Wait for Serial to initialize
+
+  // Start I2C communication
+  Wire.begin(SDA_PIN, SCL_PIN);
+  Serial.println("\nI2C Scanner");
+
+  // Scan all addresses from 1 to 127
+  for (byte address = 1; address < 128; address++) {
+    Wire.beginTransmission(address);
+    byte error = Wire.endTransmission();
+
+    // If device responds, print its address
+    if (error == 0) {
+      Serial.print("I2C device found at address 0x");
+      if (address < 16) {
+        Serial.print("0");
+      }
+      Serial.print(address, HEX);
+      Serial.println();
+    }
+  }
+
+  if (Wire.endTransmission() != 0) {
+    Serial.println("No I2C devices found");
+  }
+}
+
+void loop() {
+  // Nothing to do here, the scan is done in setup
+}
