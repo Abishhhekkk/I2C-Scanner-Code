@@ -4,41 +4,41 @@ This project scans and lists the I2C devices connected to the ESP32 microcontrol
 
 **Features** ✨
 
-Detects connected I2C devices 🔍
+-Detects connected I2C devices 🔍
 
-Displays device addresses in hexadecimal format 💻
+-Displays device addresses in hexadecimal format 💻
 
-Configurable SDA and SCL pins (**default: GPIO21 for SDA and GPIO22 for SCL**) 🔌
+-Configurable SDA and SCL pins (**default: GPIO21 for SDA and GPIO22 for SCL**) 🔌
 
-Simple setup and easy to use ⚡
+-Simple setup and easy to use ⚡
 
 **Requirements 📝**
 
-ESP32 microcontroller 🌐
+-ESP32 microcontroller 🌐
 
-Arduino IDE with ESP32 support 💻
+-Arduino IDE with ESP32 support 💻
 
 **Connected I2C devices 🔗**
 
 **Instructions 🚀**
 
-Connect the ESP32 to your computer via USB. 🔌
+-Connect the ESP32 to your computer via USB. 🔌
 
-Install the ESP32 board in the Arduino IDE if you haven't already. 🛠️
+-Install the ESP32 board in the Arduino IDE if you haven't already. 🛠️
 
-Upl**oad the code to your ESP32 board. 📤**
+-**Upload the code to your ESP32 board. 📤**
 
-Open the Serial Monitor (set baud rate to 115200). 🖥️
+-Open the Serial Monitor (set baud rate to 115200). 🖥️
 
-The connected I2C devices will be listed by their I2C address in the Serial Monitor. 📜
+-The connected I2C devices will be listed by their I2C address in the Serial Monitor. 📜
 
 **Code Description 📝**
 
-The code scans I2C addresses from 1 to 127. 🔍
+-The code scans I2C addresses from 1 to 127. 🔍
 
-If a device responds, its I2C address is printed in the Serial Monitor. 💬
+-If a device responds, its I2C address is printed in the Serial Monitor. 💬
 
-The default SDA and SCL pins are GPIO21 and GPIO22, but you can change them as needed. ⚙️
+-The default SDA and SCL pins are GPIO21 and GPIO22, but you can change them as needed. ⚙️
 
 **Example Output 💡**
 
@@ -47,4 +47,4 @@ I2C device found at address 0x68
 No I2C devices found
 
 **License 📜**
-This project is open-source and available for personal and educational use. 🆓
+-This project is open-source and available for personal and educational use. 🆓
